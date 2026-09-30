@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Forteza | Project Manager & Product Owner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de color basadas en tu diseño original */
+        :root {
+            --bg-dark: #0f172a; /* Azul marino oscuro */
+            --accent: #0ea5e9; /* Azul claro/cian */
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0 60px;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        .contact-links a.btn-primary {
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        .contact-links a.btn-primary:hover {
+            background-color: #0284c7;
+            border-color: #0284c7;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            border: 4px solid var(--accent);
+            background-color: var(--card-bg);
+            background-image: url('foto-perfil.png'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--card-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .tag:hover {
+            border-color: var(--accent);
+        }
+
+        /* Experience Section */
+        .experience-section {
+            padding: 60px 0 100px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .experience-card {
+            background-color: #ffffff;
+            color: #0f172a;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .company-logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.2;
+            overflow: hidden;
+        }
+        
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .job-title {
+            color: #0ea5e9;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 20px;
+            display: inline-block;
+            background-color: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .experience-card ul {
+            list-style-type: none;
+        }
+
+        .experience-card ul li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #475569;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .experience-card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #0ea5e9;
+            font-weight: bold;
+        }
+
+/* Education & Logistics Sections */
+        .education-section {
+            padding: 60px 0;
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .edu-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .edu-card:hover {
+            transform: translateX(5px);
+        }
+
+        .edu-title {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .edu-school {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .edu-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .edu-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Logistics & Quick Facts */
+        .logistics-section {
+            padding: 60px 0 100px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .logistics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .logistics-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .logistics-box h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .logistics-box ul {
+            list-style: none;
+        }
+
+        .logistics-box ul li {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .logistics-box ul li::before {
+            content: "▹";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Diseño Responsivo para móviles */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 60px 0;
+            }
+            .hero p {
+                margin: 0 auto 30px;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+            .hero h1 { font-size: 2.5rem; }
+            .hero h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- CABECERA (HERO) -->
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Guillermo Forteza</h1>
+                <h2>Project Manager & Product Owner</h2>
+                <p>Driven Project Management, Product Owner, and Business consultant professional with a strong track record in entrepreneurship, startup acceleration, corporate innovation, and AI implementation. Passionate about fostering growth and supporting cross-functional teams through agile frameworks and strategic execution.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:fortezadesign@gmail.com" class="btn-primary">✉️ Contact Email</a>
+                    <a href="https://www.linkedin.com/in/guillermo-forteza/" target="_blank">LinkedIn</a>
+                    <a href="#">Valencia, Spain</a>
+                </div>
+            </div>
+            <!-- Tu foto irá aquí -->
+            <div class="hero-image"></div>
+        </header>
+
+        <!-- SECCIÓN DE HABILIDADES COMPRIMIDA -->
+        <section class="skills-section">
+            <h2 class="section-title">Core Competencies</h2>
+            
+            <div class="skills-grid">
+                <!-- Project Management -->
+                <div class="skill-category">
+                    <h3>Project Management</h3>
+                    <div class="tags">
+                        <span class="tag">Scrum & Kanban</span>
+                        <span class="tag">Earned Value Management (EVM)</span>
+                        <span class="tag">RAID Matrix</span>
+                        <span class="tag">Hybrid PMBOK/Agile</span>
+                        <span class="tag">Jira / Asana</span>
+                        <span class="tag">Power BI Dashboards</span>
+                    </div>
+                </div>
+
+                <!-- Product Management -->
+                <div class="skill-category">
+                    <h3>Product Owner (PO)</h3>
+                    <div class="tags">
+                        <span class="tag">Product Lifecycle (PLM)</span>
+                        <span class="tag">B2B SaaS</span>
+                        <span class="tag">RICE & MoSCoW</span>
+                        <span class="tag">Product OKRs & NSM</span>
+                        <span class="tag">A/B Testing</span>
+                        <span class="tag">Figma / Miro</span>
+                    </div>
+                </div>
+
+                <!-- Business Strategy -->
+                <div class="skill-category">
+                    <h3>Business Strategy</h3>
+                    <div class="tags">
+                        <span class="tag">Go-to-Market (GTM)</span>
+                        <span class="tag">P&L Management</span>
+                        <span class="tag">Financial Modeling</span>
+                        <span class="tag">Corporate Venturing</span>
+                        <span class="tag">SaaS Monetization</span>
+                        <span class="tag">SQL / Advanced Excel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE EXPERIENCIA COMPLETA -->
+        <section class="experience-section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-grid">
+                
+                <!-- ECU Solutions -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="ecu_logo.jpg" class="company-logo" alt="ECU Solutions">
+                        <div>
+                            <h3 class="job-title">Founder & CEO</h3>
+                            <h4 class="company-name">ECU Solutions</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Feb 2026 – Present</span>
+                    <ul>
+                        <li><strong>Project & Operations:</strong> Led operations and service delivery for B2B diagnostic services, managing a budget of 180.000€ and improving process efficiency by 20%.</li>
+                        <li><strong>Business Strategy & P&L:</strong> Defined and executed the Go-To-Market strategy, scaling revenue by 100% and optimizing client experience across the Valencian area.</li>
+                    </ul>
+                </div>
+
+                <!-- Directivos IA -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="directivos_logo.jfif" class="company-logo" alt="Directivos IA">
+                        <div>
+                            <h3 class="job-title">Co-founder & Consultant</h3>
+                            <h4 class="company-name">Directivos IA</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Sep 2025 – Jan 2026</span>
+                    <ul>
+                        <li><strong>AI Training:</strong> Designed and delivered specialized AI executive workshops, successfully training over 60 C-level management professionals.</li>
+                        <li><strong>Process Automation:</strong> Implemented workflow automations (n8n, apollo) to optimize sales operations, reducing manual task time by 15%.</li>
+                    </ul>
+                </div>
+
+                <!-- Ciudadano Conversacional -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="ciudadano_logo.jfif" class="company-logo" alt="Ciudadano Conversacional">
+                        <div>
+                            <h3 class="job-title">Product Owner & Scrum Master</h3>
+                            <h4 class="company-name">Ciudadano Conversacional</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Mar 2025 – Aug 2025</span>
+                    <ul>
+                        <li><strong>Agile Product Ownership:</strong> Managed sprints and backlog refinement for conversational AI platforms, impacting a base of 3.000 end-users.</li>
+                        <li><strong>Project Delivery:</strong> Coordinated cross-functional teams to deploy NextGenEU public administration initiatives, delivering 24 milestones on time.</li>
+                    </ul>
+                </div>
+
+                <!-- Innsomnia -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="innsomnia_logo.jfif" class="company-logo" alt="Innsomnia">
+                        <div>
+                            <h3 class="job-title">Innovation Consultant / PMO</h3>
+                            <h4 class="company-name">Innsomnia (Santander X & GSK)</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Mar 2023 – Feb 2025</span>
+                    <ul>
+                        <li><strong>Key Accounts:</strong> Directed Open Innovation programs for Banco Santander and GSK, successfully scouting and onboarding 200 startups.</li>
+                        <li><strong>Platform Development:</strong> Coordinated the launch of digital platforms for SMEs and investors, driving an engagement rate of 85%.</li>
+                    </ul>
+                </div>
+
+                <!-- Falcon Software -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="falcon_logo.jfif" class="company-logo" alt="Falcon SPM">
+                        <div>
+                            <h3 class="job-title">Founder & CEO</h3>
+                            <h4 class="company-name">Falcon Software S.L.</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Sep 2018 – Aug 2020</span>
+                    <ul>
+                        <li><strong>Executive Leadership:</strong> Led the company as CEO & Product Owner for an AI-assisted CRM platform, driving product vision and securing 85.000€ in early revenue.</li>
+                        <li><strong>Go-to-Market:</strong> Executed sales management initiatives establishing market presence and acquiring 5% B2B clients in the first year.</li>
+                    </ul>
+                </div>
+
+                <!-- Reunión Industrial -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="rei_logo.jfif" class="company-logo" alt="Reunión industrial">
+                        <div>
+                            <h3 class="job-title">PMO</h3>
+                            <h4 class="company-name">Reunión Industrial</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Oct 2017 – Oct 2018</span>
+                    <ul>
+                        <li><strong>Cross-functional Leadership:</strong> Directed product development and launch strategies for 5 new product categories, increasing segment revenue by 13%.</li>
+                        <li><strong>Project Management:</strong> Implemented Agile project management tools (Redmine) to optimize interdepartmental execution, reducing delivery delays by 20%.</li>
+                    </ul>
+                </div>
+
+                <!-- Reca Hispania -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="reca_logo.jfif" class="company-logo" alt="RECA Hispania">
+                        <div>
+                            <h3 class="job-title">Product Manager</h3>
+                            <h4 class="company-name">Reca Hispania (Würth Group)</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Jun 2016 – Sep 2017</span>
+                    <ul>
+                        <li><strong>Digital Strategy:</strong> Drove digital marketing strategy and promotional campaigns, increasing online lead generation by 7%.</li>
+                        <li><strong>Sales Support:</strong> Provided analytical insights and operational support to empower a commercial network of 150 sales representatives.</li>
+                    </ul>
+                </div>
+
+                <!-- Möler -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <img src="moler_logo.jfif" class="company-logo" alt="Möler">
+                        <div>
+                            <h3 class="job-title">Chief Design Officer</h3>
+                            <h4 class="company-name">Möler - Gafas de Madera</h4>
+                        </div>
+                    </div>
+                    <span class="job-date">Oct 2013 – Jun 2015</span>
+                    <ul>
+                        <li><strong>Product Design:</strong> Oversaw end-to-end product design and brand identity, resulting in the successful commercial launch of 7 handcrafted eyewear collections.</li>
+                        <li><strong>Hardware Prototyping:</strong> Managed the hardware prototyping and manufacturing process, reducing production times by 30% while maintaining artisan quality.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+<!-- SECCIÓN DE EDUCACIÓN Y CERTIFICACIONES -->
+        <section class="education-section">
+            <h2 class="section-title">Education & Certifications</h2>
+            
+            <div class="edu-grid">
+                
+                <div class="edu-card">
+                    <h3 class="edu-title">MBA – Digital Business Administration</h3>
+                    <h4 class="edu-school">Demium Startups Academy</h4>
+                    <span class="edu-date">Sep 2018 – Mar 2019</span>
+                    <p class="edu-desc">Specialization in process optimization, operations management, logistics, and strategic management of technology projects.</p>
+                </div>
+
+                <div class="edu-card">
+                    <h3 class="edu-title">Calidad Total - Mercadona</h3>
+                    <h4 class="edu-school">EDEM - Escuela de Empresarios</h4>
+                    <span class="edu-date">Sep 2019 – Feb 2020</span>
+                    <p class="edu-desc">Executive program focused on Mercadona’s management model, customer-centric corporate culture, process efficiency, and leadership.</p>
+                </div>
+
+                <div class="edu-card">
+                    <h3 class="edu-title">Design Engineering and Product Development</h3>
+                    <h4 class="edu-school">Universidad Cardenal Herrera CEU</h4>
+                    <span class="edu-date"> Degree (4 years)</span>
+                    <p class="edu-desc">Combines engineering and creativity to design everyday equipment from initial idea to manufacturing.</p>
+                </div>
+
+                <div class="edu-card">
+                    <h3 class="edu-title">Technical Engineering in Industrial Design</h3>
+                    <h4 class="edu-school">Universidad Cardenal Herrera CEU</h4>
+                    <span class="edu-date">Bachelor's Degree (3 years)</span>
+                    <p class="edu-desc">Foundation in product interaction, materials, and industrial manufacturing processes.</p>
+                </div>
+
+                <div class="edu-card">
+                    <h3 class="edu-title">Specialist – Graphic Design & Multimedia</h3>
+                    <h4 class="edu-school">UPV - Universidad Politécnica de Valencia</h4>
+                    <span class="edu-date">Diploma</span>
+                    <p class="edu-desc">Competencies in visual identity, digital interface design (UI/UX), and multimedia content creation.</p>
+                </div>
+
+                <div class="edu-card">
+                    <h3 class="edu-title">Certifications & Awards</h3>
+                    <h4 class="edu-school">Various Institutions</h4>
+                    <span class="edu-date">Google, EOI & startups.st</span>
+                    <p class="edu-desc">
+                        • Fundamentals of Digital Marketing (Google)<br>
+                        • GTD - Scrum & Agile (startups.st)<br>
+                        • 3rd Place Shell Eco-marathon European Award (H2 prototype)
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE LOGÍSTICA (QUICK FACTS) -->
+        <section class="logistics-section">
+            <h2 class="section-title">Candidate Logistics & Quick Facts</h2>
+            
+            <div class="logistics-grid">
+                
+                <div class="logistics-box">
+                    <h3>1. Mobility & Work Model</h3>
+                    <ul>
+                        <li><strong>Current Location:</strong> Valencia, Spain (CET/UTC+1)</li>
+                        <li><strong>Relocation:</strong> Open to relocate (Target hubs: SLP México or Aguascalientes)</li>
+                        <li><strong>Work Preference:</strong> Remote | Hybrid | On-site</li>
+                        <li><strong>Travel:</strong> Available up to 25%</li>
+                    </ul>
+                </div>
+
+                <div class="logistics-box">
+                    <h3>2. Legal Status</h3>
+                    <ul>
+                        <li><strong>Status:</strong> EU Citizen (Spanish National)</li>
+                        <li><strong>Work Authorization:</strong> Unrestricted across the EU</li>
+                        <li><strong>Sponsorship:</strong> Open to sponsored visa for relocations</li>
+                        <li><strong>Vetting:</strong> Open to background & reference checks</li>
+                    </ul>
+                </div>
+
+                <div class="logistics-box">
+                    <h3>3. Availability & Comp.</h3>
+                    <ul>
+                        <li><strong>Notice:</strong> Immediate / 15-day standard transition</li>
+                        <li><strong>Contract:</strong> Full-Time Permanent</li>
+                        <li><strong>Target EU:</strong> €45,000 – €50,000 gross/year</li>
+                        <li><strong>Target MX:</strong> 60,000 – 85,000 MXN gross/month</li>
+                    </ul>
+                </div>
+
+                <div class="logistics-box">
+                    <h3>4. Languages & Tech</h3>
+                    <ul>
+                        <li><strong>Spanish:</strong> Native</li>
+                        <li><strong>English:</strong> Professional Working Proficiency (B2+ / Full business delivery)</li>
+                        <li><strong>Setup:</strong> High-speed fiber, dedicated home office for distributed global teams</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
