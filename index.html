@@ -34,7 +34,10 @@ nav .w{display:flex;justify-content:space-between;align-items:center;gap:14px;fl
 .kpis b{display:block;font-size:2rem;line-height:1.1;font-weight:800}
 .kpis span{color:var(--mu);font-size:.9rem}
 section{padding:60px 0 8px}
-h3.t{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin-bottom:22px}
+.section-header {display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 22px;}
+h3.t{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin:0}
+.sort-select {background: var(--bg2); color: var(--tx); border: 1px solid var(--line); padding: 6px 12px; border-radius: 6px; font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; outline: none;}
+.sort-select:focus {border-color: var(--ac);}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{background:var(--bg2);border:1px solid var(--line);padding:5px 13px;border-radius:99px;font-size:.9rem;font-weight:600}
 details.x{border-top:1px solid var(--line);padding:18px 0}
@@ -73,67 +76,76 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 <div class="photo" role="img" aria-label="Portrait of Guillermo Forteza"></div>
 </header>
 <div class="kpis" id="kp"></div>
- 
+
 <section><h3 class="t">Core skills</h3><div class="tags" id="tg"></div></section>
- 
-<section><h3 class="t">Experience</h3><div id="tl">
- 
-<details class="x" data-id="ciudadano" open><summary><span class="dt">Mar 2025 – Aug 2025</span><span class="ti"><b>Project Manager & Product Owner</b><span>Ciudadano Conversacional</span></span></summary><ul>
+
+<section>
+    <div class="section-header">
+        <h3 class="t">Experience</h3>
+        <select class="sort-select" id="sort-select">
+            <option value="date">Sort by Date</option>
+            <option value="relevance">Sort by Relevance</option>
+        </select>
+    </div>
+    <div id="tl">
+
+<details class="x" data-id="ecu" data-date="2026-01"><summary><span class="dt">Jan 2026 – Present</span><span class="ti"><b>Founder & CEO</b><span>ECU Solutions</span></span></summary><ul>
+<li>Launched a B2B line for vehicle electronics (ECU programming, repair and diagnostics) with its own brand, accounts and clients, alongside an existing workshop.</li>
+<li>Went from €0 to €90k in B2B revenue in 8 months: 300 workshops prospected, 17 recurring clients and 120 services. The shared business doubled from €90k to €180k.</li>
+<li>A remote model (cloud map reprogramming, technician on site) raised services per day by 20%. Invested €60k in tools and licences.</li></ul></details>
+
+<details class="x" data-id="directivos" data-date="2025-09"><summary><span class="dt">Sep 2025 – Jan 2026</span><span class="ti"><b>Partner & Consultant</b><span>Directivos IA</span></span></summary><ul>
+<li>Delivered 20 one-to-one AI sessions for HR, sales and finance leaders at Valencian companies.</li>
+<li>Automated lead capture with n8n and Apollo, lifting lead conversion by 7%.</li></ul></details>
+
+<details class="x" data-id="ciudadano" data-date="2025-03" open><summary><span class="dt">Mar 2025 – Aug 2025</span><span class="ti"><b>Project Manager & Product Owner</b><span>Ciudadano Conversacional</span></span></summary><ul>
 <li>Led 24 WhatsApp conversational-AI projects for 7 Spanish public bodies with a team of 9 across marketing, support and IT: 3,000+ active users, and 5,000+ in one festival week.</li>
 <li>Won 10 public tenders (around €200k per contracting body), justified every project and delivered each one funded on time.</li>
 <li>Prioritised the backlog with MoSCoW in Jira and Confluence, and set fixed answer templates to curb hallucinations. In Torre Pacheco, citizen response time fell from 2 days to 15 minutes.</li>
 <li>Stack: WhatsApp Business Platform, Google Cloud, ChatGPT.</li></ul></details>
- 
-<details class="x" data-id="falcon" open><summary><span class="dt">Sep 2018 – Aug 2020</span><span class="ti"><b>Founder & CEO</b><span>Falcon Software S.L.</span></span></summary><ul>
-<li>Built an AI-assisted CRM (B2B SaaS) for field sales reps: route, visit and order tracking, GPS-based data capture, purchase-potential scoring and product recommendations.</li>
-<li>Defined the value proposition, pricing and business plan, and validated the product with 35 real users with one developer (MERN stack).</li>
-<li>Selected by Demium and Lanzadera and admitted to APX; in advanced talks with two industrial groups (4,000 and 150 sales reps).</li></ul></details>
- 
-<details class="x" data-id="innsomnia" open><summary><span class="dt">Mar 2023 – Feb 2025</span><span class="ti"><b>Innovation Consultant & PMO</b><span>Innsomnia (Santander X 100, SAVIA, GSK)</span></span></summary><ul>
+
+<details class="x" data-id="innsomnia" data-date="2023-03" open><summary><span class="dt">Mar 2023 – Feb 2025</span><span class="ti"><b>Innovation Consultant & PMO</b><span>Innsomnia (Santander X 100, SAVIA, GSK)</span></span></summary><ul>
 <li>Santander X 100: coordinated the programme and its budget (€600k in 2023, €1M in 2024–25, grown through direct negotiation). Startups rose from 90 to 120 to 150 and none dropped out.</li>
 <li>Planned, designed and budgeted the mentoring, acceleration and community platforms, and created Investors Connect (25 business angels and 12 funds; 12 startups contacted investors).</li>
 <li>SAVIA Innova: ran the open-innovation call for a care-home group, screening 120 startups per call, with 3 winners each time and 3 pilots.</li>
 <li>GSK: designed an open-innovation plan across four therapeutic areas and confirmed 15 partners, research centres and specialists.</li>
 <li>EOI accelerator: automated intake with Dux-Soup, Calendly and HubSpot, taking sign-ups from 37 in a year to 156 in two months.</li></ul></details>
- 
-<details class="x" data-id="ceei" open><summary><span class="dt">Oct 2020 – Feb 2023</span><span class="ti"><b>Innovation & Business Consultant</b><span>CEEI Valencia</span></span></summary><ul>
+
+<details class="x" data-id="ceei" data-date="2020-10" open><summary><span class="dt">Oct 2020 – Feb 2023</span><span class="ti"><b>Innovation & Business Consultant</b><span>CEEI Valencia</span></span></summary><ul>
 <li>CV Innova: coordinated an open-innovation programme, recruiting corporate challengers and startup solvers.</li>
 <li>Mentored 12 companies per block, three blocks a year, in each of two programmes, writing their business plans. Screened 150 applications down to 20 finalists and 3 winners.</li>
 <li>Prepared public-funding bids: a CDTi application scored 85/100, above the cut-off but unfunded for budget reasons, and two IVACE innovation grants worth €75k were awarded.</li>
 <li>Designed a document-management platform for public programmes (mentors, hours, justification reports, KPIs) and introduced digital contract signing.</li></ul></details>
- 
-<details class="x" data-id="ecu"><summary><span class="dt">Jan 2026 – Present</span><span class="ti"><b>Founder & CEO</b><span>ECU Solutions</span></span></summary><ul>
-<li>Launched a B2B line for vehicle electronics (ECU programming, repair and diagnostics) with its own brand, accounts and clients, alongside an existing workshop.</li>
-<li>Went from €0 to €90k in B2B revenue in 8 months: 300 workshops prospected, 17 recurring clients and 120 services. The shared business doubled from €90k to €180k.</li>
-<li>A remote model (cloud map reprogramming, technician on site) raised services per day by 20%. Invested €60k in tools and licences.</li></ul></details>
- 
-<details class="x" data-id="directivos"><summary><span class="dt">Sep 2025 – Jan 2026</span><span class="ti"><b>Partner & Consultant</b><span>Directivos IA</span></span></summary><ul>
-<li>Delivered 20 one-to-one AI sessions for HR, sales and finance leaders at Valencian companies.</li>
-<li>Automated lead capture with n8n and Apollo, lifting lead conversion by 7%.</li></ul></details>
- 
-<details class="x" data-id="rei"><summary><span class="dt">Oct 2017 – Oct 2018</span><span class="ti"><b>Product & Project Manager</b><span>Reunión Industrial</span></span></summary><ul>
+
+<details class="x" data-id="falcon" data-date="2018-09" open><summary><span class="dt">Sep 2018 – Aug 2020</span><span class="ti"><b>Founder & CEO</b><span>Falcon Software S.L.</span></span></summary><ul>
+<li>Built an AI-assisted CRM (B2B SaaS) for field sales reps: route, visit and order tracking, GPS-based data capture, purchase-potential scoring and product recommendations.</li>
+<li>Defined the value proposition, pricing and business plan, and validated the product with 35 real users with one developer (MERN stack).</li>
+<li>Selected by Demium and Lanzadera and admitted to APX; in advanced talks with two industrial groups (4,000 and 150 sales reps).</li></ul></details>
+
+<details class="x" data-id="bcoach" data-date="2022-03"><summary><span class="dt">Mar 2022 – Dec 2023</span><span class="ti"><b>Business Advisor, 5% equity</b><span>BCoach</span></span></summary><ul>
+<li>Defined the go-to-market for a football coaching app (set-piece planning, tactical board, player tracking): club-wide deals instead of selling to individual coaches.</li>
+<li>Worked on an agreement with a first-division club to roll the app out across all age categories.</li></ul></details>
+
+<details class="x" data-id="rei" data-date="2017-10"><summary><span class="dt">Oct 2017 – Oct 2018</span><span class="ti"><b>Product & Project Manager</b><span>Reunión Industrial</span></span></summary><ul>
 <li>Launched new furniture-hardware lines for DIY retailers (Leroy Merlin, Bauhaus, Brico Depot): door stops, bike racks, textile stops, furniture legs and antibacterial copper handles.</li>
 <li>Managed catalogue, pricing, offers, tenders and margins. Big-box sales of the metal handles line grew 13%.</li>
 <li>Adapted Redmine to real workflows across marketing, sales, purchasing, operations and quality: deliveries later than the agreed date fell 20%.</li>
 <li>A door stop developed during my tenure won a Red Dot Design award.</li></ul></details>
- 
-<details class="x" data-id="reca"><summary><span class="dt">Jun 2016 – Sep 2017</span><span class="ti"><b>Product Manager</b><span>Reca Hispania (Würth Group)</span></span></summary><ul>
+
+<details class="x" data-id="reca" data-date="2016-06"><summary><span class="dt">Jun 2016 – Sep 2017</span><span class="ti"><b>Product Manager</b><span>Reca Hispania (Würth Group)</span></span></summary><ul>
 <li>Turned product and pricing decisions from three product managers into catalogue, web and offers, and localised German content and technical documents into Spanish.</li>
 <li>Added a visit-request form to the website: requests rose from about 4 a year to 35.</li>
 <li>Supported all 150 sales reps with technical advice, field visits, product training and special-terms approvals that protected margins.</li></ul></details>
- 
-<details class="x" data-id="bcoach"><summary><span class="dt">Mar 2022 – Dec 2023</span><span class="ti"><b>Business Advisor, 5% equity</b><span>BCoach</span></span></summary><ul>
-<li>Defined the go-to-market for a football coaching app (set-piece planning, tactical board, player tracking): club-wide deals instead of selling to individual coaches.</li>
-<li>Worked on an agreement with a first-division club to roll the app out across all age categories.</li></ul></details>
- 
-<details class="x" data-id="moler"><summary><span class="dt">Oct 2013 – Jun 2015</span><span class="ti"><b>Co-founder & Chief Design Officer</b><span>Möler, wooden eyewear</span></span></summary><ul>
+
+<details class="x" data-id="moler" data-date="2013-10"><summary><span class="dt">Oct 2013 – Jun 2015</span><span class="ti"><b>Co-founder & Chief Design Officer</b><span>Möler, wooden eyewear</span></span></summary><ul>
 <li>Grew the range from 2 to 7 models and added three woods and five colour options.</li>
 <li>Moved temples and frames from manual to laser cutting, keeping hand finishing: faster prototyping and a wider catalogue at no extra cost.</li>
 <li>Covered design, production and sales in a three-person team.</li></ul></details>
- 
+
 </div></section>
- 
+
 <section><h3 class="t">Education and certifications</h3><div class="edu">
+<div><b><a href="https://simpli-web.app.link/e/9OCc3WNnV7b" target="_blank" rel="noopener" style="text-decoration: underline;">PMP Basics</a></b><span>SkillUp (Simplilearn), Nov 2026</span></div>
 <div><b>MBA, Digital Business Administration</b><span>Demium Startups Academy, Sep 2018 – Mar 2019</span></div>
 <div><b>Calidad Total, Mercadona</b><span>EDEM Escuela de Empresarios, Sep 2019 – Feb 2020</span></div>
 <div><b>Design Engineering and Product Development</b><span>Universidad Cardenal Herrera CEU, 4-year degree</span></div>
@@ -141,7 +153,7 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 <div><b>Specialist in Graphic Design and Multimedia</b><span>Universidad Politécnica de Valencia</span></div>
 <div><b>Certifications and awards</b><span>Digital Marketing Fundamentals (Google), GTD with Scrum and Agile (startups.st), 3rd place Shell Eco-marathon Europe 2013 (hydrogen prototype)</span></div>
 </div></section>
- 
+
 <section><h3 class="t">Practical details</h3><div class="lg">
 <div><h4>Location and mobility</h4><ul><li>Valencia, Spain (CET)</li><li>Open to relocating, especially San Luis Potosí or Aguascalientes in Mexico</li><li>Remote, hybrid or on-site; travel up to 25%</li></ul></div>
 <div><h4>Work authorisation</h4><ul><li>Spanish national and EU citizen</li><li>Open to sponsored visas for relocation</li><li>Open to background and reference checks</li></ul></div>
@@ -157,8 +169,12 @@ innovation:{n:"Innovation & Startups",h:"Innovation Manager, Open Innovation & S
 business:{n:"Founder & Business",h:"Founder & Business Advisor, Go-to-Market and B2B Growth",s:"I launched ECU Solutions from zero to €90k of B2B revenue in eight months, took Falcon through Demium, Lanzadera and APX, and advised BCoach on go-to-market. I work hands-on across sales, operations, pricing and product.",k:[["€0 to €90k","B2B revenue in 8 months"],["17","recurring workshop clients"],["3","ventures founded or co-founded"],["+20%","services per day with a remote model"]],t:["Go-to-market","Pricing and packaging","P&L and budgets","Financial modelling","B2B sales","Operations","Business plans","Investor documentation","SQL and advanced Excel"],o:["ecu","falcon","bcoach","directivos","moler","innsomnia","ceei","ciudadano","rei","reca"]},
 industrial:{n:"Industrial Product",h:"Industrial Product & Project Manager",s:"I have managed industrial and retail products from design to shelf: new lines for DIY retailers (Leroy Merlin, Bauhaus, Brico Depot) at Reunión Industrial, and catalogue, web and sales support for a 150-rep network at Reca Hispania. Industrial design engineer by training.",k:[["Red Dot","design award, door stop from my tenure"],["+13%","big-box sales in metal handles"],["−20%","late deliveries against agreed dates"],["150","sales reps supported"]],t:["Product lifecycle","Pricing and margins","Tenders and offers","Catalogue management","Operations and stock","Redmine","Industrial design","Prototyping","DIY and retail accounts"],o:["rei","reca","moler","ecu","ciudadano","falcon","innsomnia","ceei","directivos","bcoach"]}
 };
+
 var P=document.getElementById("pills");
+var sortSelect = document.getElementById("sort-select");
+
 Object.keys(V).forEach(function(k){var b=document.createElement("button");b.textContent=V[k].n;b.dataset.k=k;b.onclick=function(){location.hash=k};P.appendChild(b)});
+
 function show(){
  var k=location.hash.slice(1);if(!V[k])k="product";var v=V[k];
  Array.prototype.forEach.call(P.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===k)});
@@ -166,9 +182,45 @@ function show(){
  document.title="Guillermo Forteza | "+v.h;
  document.getElementById("kp").innerHTML=v.k.map(function(x){return "<div><b>"+x[0]+"</b><span>"+x[1]+"</span></div>"}).join("");
  document.getElementById("tg").innerHTML=v.t.map(function(x){return "<span>"+x+"</span>"}).join("");
- var box=document.getElementById("tl");
- v.o.forEach(function(id,i){var d=box.querySelector('[data-id="'+id+'"]');box.appendChild(d);d.open=i<4});
+ sortExperiences(v);
 }
+
+function sortExperiences(profileData) {
+    var box = document.getElementById("tl");
+    var elements = Array.from(box.children);
+    var sortMethod = sortSelect.value;
+    
+    // Sort logic
+    elements.sort(function(a, b) {
+        if (sortMethod === "relevance") {
+            // Sort by relevance based on the current profile's ordered array `v.o`
+            var indexA = profileData.o.indexOf(a.dataset.id);
+            var indexB = profileData.o.indexOf(b.dataset.id);
+            return indexA - indexB;
+        } else {
+            // Sort by date descending (newest first)
+            var dateA = a.dataset.date;
+            var dateB = b.dataset.date;
+            return dateB.localeCompare(dateA);
+        }
+    });
+
+    // Re-append sorted elements and handle which ones should be open by default
+    elements.forEach(function(d, i) {
+        box.appendChild(d);
+        // If sorted by relevance, open top 4. If by date, you can choose to open top 4 or leave them all closed/open. 
+        // We will stick to the default behavior of opening the first 4 for consistency.
+        d.open = i < 4; 
+    });
+}
+
+// Listen for dropdown changes
+sortSelect.addEventListener("change", function() {
+    var k = location.hash.slice(1);
+    if (!V[k]) k = "product";
+    sortExperiences(V[k]);
+});
+
 window.addEventListener("hashchange",show);show();
 </script>
 </body>
