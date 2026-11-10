@@ -48,6 +48,9 @@ nav{position:sticky;top:0;z-index:5;background:rgba(14,23,38,.92);backdrop-filte
 nav .w{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
 .logo{font-weight:800;text-decoration:none}
 .pills{display:flex;gap:6px;flex-wrap:wrap}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem;color:var(--mu)}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--ac)}
 .pills button{font:600 .85rem "Bricolage Grotesque",sans-serif;background:none;color:var(--mu);border:1px solid var(--line);padding:6px 14px;border-radius:99px;cursor:pointer}
 .pills button[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#04121f}
 .hero{display:grid;grid-template-columns:1fr 190px;gap:48px;align-items:center;padding:84px 0 56px}
@@ -71,6 +74,21 @@ h3.t{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin:0}
 .sort-select:focus {border-color: var(--ac);}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{background:var(--bg2);border:1px solid var(--line);padding:5px 13px;border-radius:99px;font-size:.9rem;font-weight:600}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.project-card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.project-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.project-logo{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:9px;padding:5px;flex:0 0 auto}
+.project-kicker{color:var(--ac);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.project-card h4{font-size:1.15rem;line-height:1.25;margin:2px 0 10px}
+.project-card p{color:var(--mu);font-size:.94rem;margin-bottom:12px}
+.project-card ul{padding-left:18px;color:#c9d6e8;font-size:.93rem}
+.project-card li{margin-bottom:7px}
+.project-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.project-tags span{font-size:.78rem;background:#0e1726;border:1px solid var(--line);border-radius:99px;padding:4px 9px;color:var(--mu)}
+.tool-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 34px}
+.tool-group h4{font-size:1rem;color:var(--ac);margin-bottom:8px}
+.tool-group p{font-size:.93rem;color:#c9d6e8}
+.navlinks a:focus-visible,.pills button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
 details.x{border-top:1px solid var(--line);padding:18px 0}
 details.x:last-child{border-bottom:1px solid var(--line)}
 summary{display:grid;grid-template-columns:170px 1fr;gap:20px;cursor:pointer;list-style:none}
@@ -94,8 +112,8 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 </style>
 </head>
 <body>
-<nav><div class="w"><a class="logo" href="#product">Guillermo Forteza</a><div class="pills" id="pills" role="group" aria-label="Profile view"></div></div></nav>
-<div class="w">
+<nav><div class="w"><a class="logo" href="#top">Guillermo Forteza</a><div class="navlinks" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#tools">Tools</a></div><div class="pills" id="pills" role="group" aria-label="Explore experience by professional focus"></div></div></nav>
+<div class="w" id="top">
 <header class="hero">
 <div>
 <h1>Guillermo Forteza</h1>
@@ -110,7 +128,67 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 
 <section><h3 class="t">Core skills</h3><div class="tags" id="tg"></div></section>
 
-<section>
+<section id="projects">
+  <div class="section-header">
+    <h3 class="t">Selected projects</h3>
+    <span class="where">Selected work across technology, product and programme management</span>
+  </div>
+  <div class="projects">
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="ciudadano_logo.jfif" alt="Ciudadano Conversacional logo" loading="lazy">
+        <div><div class="project-kicker">Project & Product Delivery</div><h4>Conversational AI for Public Services</h4></div>
+      </div>
+      <p>Led a portfolio of 24 WhatsApp conversational-AI projects for 7 Spanish public bodies, coordinating a cross-functional team of 9: 5 developers and 4 professionals across marketing, support and IT.</p>
+      <ul>
+        <li>Municipal and provincial assistants (excluding Castellón) served 3,000+ active users.</li>
+        <li>MagdaBot, for the Magdalenas de Castellón festival, reached 5,000+ users during a single festival week.</li>
+        <li>In Torre Pacheco, citizen response time fell from 2 days to 15 minutes.</li>
+        <li>10 public tenders across 7 contracting authorities, with an approximate combined value of €1.4M.</li>
+      </ul>
+      <div class="project-tags"><span>MoSCoW</span><span>RICE</span><span>WSJF</span><span>EVM</span><span>Jira</span><span>Google Cloud</span></div>
+    </article>
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="falcon_logo.jfif" alt="Falcon Software logo" loading="lazy">
+        <div><div class="project-kicker">0-to-1 Product Development</div><h4>Falcon SPM — B2B SaaS CRM</h4></div>
+      </div>
+      <p>Built an AI-assisted CRM for field sales teams from concept to deployment, translating business needs into product scope and working software.</p>
+      <ul>
+        <li>Defined the MVP, value proposition, pricing, UX/UI wireframes, functional specifications and user stories.</li>
+        <li>Coordinated development with a MERN-stack developer and validated the product with 35 real users.</li>
+        <li>Selected by Demium and Lanzadera and admitted to the APX accelerator; reached advanced discussions with industrial groups representing salesforces of 4,000 and 150.</li>
+      </ul>
+      <div class="project-tags"><span>Design Thinking</span><span>Lean Startup</span><span>Scrum</span><span>MERN</span><span>B2B SaaS</span></div>
+    </article>
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="innsomnia_logo.jfif" alt="Innsomnia logo" loading="lazy">
+        <div><div class="project-kicker">PMO & Programme Management</div><h4>Santander X 100 — Global Entrepreneurship Programme</h4></div>
+      </div>
+      <p>Coordinated a global entrepreneurship programme and its supporting digital platforms, working with Banco Santander and startup ecosystem stakeholders.</p>
+      <ul>
+        <li>Managed an initial €600K budget in 2023 and negotiated an increase to €1M in May 2024, approved in December 2024 for the 2025 programme.</li>
+        <li>Scaled cumulative participation from 90 to 120 to 150 startups through successive batches, with no dropouts.</li>
+        <li>Created Investors Connect with 25 business angels and 12 funds; 12 startups contacted investors.</li>
+      </ul>
+      <div class="project-tags"><span>PMO</span><span>Budget negotiation</span><span>Scrum</span><span>Digital platforms</span><span>Stakeholder management</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="tools">
+  <h3 class="t">Tools & platforms</h3>
+  <div class="tool-groups">
+    <div class="tool-group"><h4>Project & Delivery</h4><p>Jira (Expert) · Confluence (Expert) · Trello (Expert) · Microsoft Project (Working Knowledge) · Asana (Intermediate) · Redmine (Intermediate) · ClickUp (Intermediate)</p></div>
+    <div class="tool-group"><h4>Collaboration & Design</h4><p>Notion (Advanced) · Slack (Advanced) · Figma (Intermediate) · Miro (Intermediate)</p></div>
+    <div class="tool-group"><h4>Data & Analytics</h4><p>Excel (Advanced) · Power BI (Basic) · SQL (Basic)</p></div>
+    <div class="tool-group"><h4>CRM & Automation</h4><p>HubSpot · Apollo · Calendly · Dux-Soup · n8n (Basic)</p></div>
+    <div class="tool-group"><h4>Technology Platforms</h4><p>Google Cloud · WhatsApp Business Platform · ChatGPT</p></div>
+  </div>
+</section>
+
+<section id="experience">
     <div class="section-header">
         <h3 class="t">Experience</h3>
         <select class="sort-select" id="sort-select">
@@ -175,7 +253,7 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 
 </div></section>
 
-<section><h3 class="t">Education and certifications</h3><div class="edu">
+<section id="education"><h3 class="t">Education and certifications</h3><div class="edu">
 <div><b><a href="https://simpli-web.app.link/e/9OCc3WNnV7b" target="_blank" rel="noopener" style="text-decoration: underline;">PMP Basics</a></b><span>SkillUp (Simplilearn), Nov 2026</span></div>
 <div><b>MBA, Digital Business Administration</b><span>Demium Startups Academy, Sep 2018 – Mar 2019</span></div>
 <div><b>Calidad Total, Mercadona</b><span>EDEM Escuela de Empresarios, Sep 2019 – Feb 2020</span></div>
@@ -185,7 +263,7 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 <div><b>Certifications and awards</b><span>Digital Marketing Fundamentals (Google), GTD with Scrum and Agile (startups.st), 3rd place Shell Eco-marathon Europe 2013 (hydrogen prototype)</span></div>
 </div></section>
 
-<section><h3 class="t">Practical details</h3><div class="lg">
+<section id="contact"><h3 class="t">Practical details</h3><div class="lg">
 <div><h4>Location and mobility</h4><ul><li>Valencia, Spain (CET)</li><li>Open to international relocation, prioritising locations offering a favourable salary-to-cost-of-living balance.</li><li>Remote, hybrid or on-site; travel up to 25%</li></ul></div>
 <div><h4>Work authorisation</h4><ul><li>Spanish national and EU citizen</li><li>Open to sponsored visas for relocation</li><li>Open to background and reference checks</li></ul></div>
 <div><h4>Availability</h4><ul><li>Available to start following an agreed transition period</li><li>Full-time permanent contracts</li></ul></div>
