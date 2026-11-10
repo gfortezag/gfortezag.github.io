@@ -107,7 +107,7 @@ details li{margin-bottom:8px;color:#c9d6e8;font-size:.97rem;max-width:70ch}
 .lg h4{font-size:1rem;margin-bottom:8px;color:var(--ac)}
 .lg li{list-style:none;color:#c9d6e8;font-size:.93rem;margin-bottom:5px}
 footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
-@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:48px}.photo{order:-1;width:130px;height:130px}summary{grid-template-columns:1fr;gap:4px}details ul{margin-left:0}.kpis div{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.kpis div:last-child{border-bottom:0}}
+@media(max-width:720px){nav .w{align-items:flex-start}.navlinks{order:3;width:100%}.pills{order:4;width:100%}.hero{grid-template-columns:1fr;padding-top:48px}.photo{order:-1;width:130px;height:130px}summary{grid-template-columns:1fr;gap:4px}details ul{margin-left:0}.kpis div{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.kpis div:last-child{border-bottom:0}}
 @media(prefers-reduced-motion:no-preference){.hero,.kpis{animation:in .5s ease both}@keyframes in{from{opacity:.4}to{opacity:1}}}
 </style>
 </head>
@@ -281,11 +281,12 @@ industrial:{n:"Industrial Product",h:"Industrial Product & Project Manager",s:"I
 
 var P=document.getElementById("pills");
 var sortSelect = document.getElementById("sort-select");
+var activeProfile = "product";
 
 Object.keys(V).forEach(function(k){var b=document.createElement("button");b.textContent=V[k].n;b.dataset.k=k;b.onclick=function(){location.hash=k};P.appendChild(b)});
 
 function show(){
- var k=location.hash.slice(1);if(!V[k])k="product";var v=V[k];
+ var k=location.hash.slice(1);if(V[k])activeProfile=k;var v=V[activeProfile];
  Array.prototype.forEach.call(P.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===k)});
  document.getElementById("hl").textContent=v.h;document.getElementById("sm").textContent=v.s;
  document.title="Guillermo Forteza | "+v.h;
@@ -325,9 +326,7 @@ function sortExperiences(profileData) {
 
 // Listen for dropdown changes
 sortSelect.addEventListener("change", function() {
-    var k = location.hash.slice(1);
-    if (!V[k]) k = "product";
-    sortExperiences(V[k]);
+    sortExperiences(V[activeProfile]);
 });
 
 window.addEventListener("hashchange",show);show();
