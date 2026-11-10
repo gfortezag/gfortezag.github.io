@@ -3,8 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guillermo Forteza | Project Manager & Product Owner</title>
-<meta name="description" content="Guillermo Forteza: project manager, product owner, innovation manager and founder based in Valencia, Spain.">
+<title>Guillermo Forteza | Technology Project & Product Manager</title>
+<meta name="description" content="Guillermo Forteza is a Technology Project & Product Manager connecting business, product and technology across B2B SaaS, conversational AI and digital transformation. Based in Valencia, Spain.">
+<link rel="canonical" href="https://gfortezag.github.io/">
+<meta name="theme-color" content="#0e1726">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gfortezag.github.io/">
+<meta property="og:title" content="Guillermo Forteza | Technology Project & Product Manager">
+<meta property="og:description" content="Technology project and product management across B2B SaaS, conversational AI, digital transformation and business strategy.">
+<meta property="og:image" content="https://gfortezag.github.io/foto-perfil.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guillermo Forteza | Technology Project & Product Manager">
+<meta name="twitter:description" content="Connecting business, product and technology through digital transformation, B2B SaaS and AI.">
+<meta name="twitter:image" content="https://gfortezag.github.io/foto-perfil.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Guillermo Forteza",
+  "url": "https://gfortezag.github.io/",
+  "image": "https://gfortezag.github.io/foto-perfil.png",
+  "jobTitle": "Technology Project & Product Manager",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Valencia",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/guillermo-forteza/",
+    "https://github.com/gfortezag"
+  ],
+  "knowsLanguage": ["Spanish", "Catalan", "Valencian", "English"]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0e1726;--bg2:#13203a;--line:#27395a;--tx:#eaf0f8;--mu:#9db0c9;--ac:#38bdf8;color-scheme:dark}
@@ -17,6 +49,9 @@ nav{position:sticky;top:0;z-index:5;background:rgba(14,23,38,.92);backdrop-filte
 nav .w{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
 .logo{font-weight:800;text-decoration:none}
 .pills{display:flex;gap:6px;flex-wrap:wrap}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem;color:var(--mu)}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--ac)}
 .pills button{font:600 .85rem "Bricolage Grotesque",sans-serif;background:none;color:var(--mu);border:1px solid var(--line);padding:6px 14px;border-radius:99px;cursor:pointer}
 .pills button[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#04121f}
 .hero{display:grid;grid-template-columns:1fr 190px;gap:48px;align-items:center;padding:84px 0 56px}
@@ -40,6 +75,21 @@ h3.t{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin:0}
 .sort-select:focus {border-color: var(--ac);}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{background:var(--bg2);border:1px solid var(--line);padding:5px 13px;border-radius:99px;font-size:.9rem;font-weight:600}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.project-card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.project-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.project-logo{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:9px;padding:5px;flex:0 0 auto}
+.project-kicker{color:var(--ac);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.project-card h4{font-size:1.15rem;line-height:1.25;margin:2px 0 10px}
+.project-card p{color:var(--mu);font-size:.94rem;margin-bottom:12px}
+.project-card ul{padding-left:18px;color:#c9d6e8;font-size:.93rem}
+.project-card li{margin-bottom:7px}
+.project-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.project-tags span{font-size:.78rem;background:#0e1726;border:1px solid var(--line);border-radius:99px;padding:4px 9px;color:var(--mu)}
+.tool-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 34px}
+.tool-group h4{font-size:1rem;color:var(--ac);margin-bottom:8px}
+.tool-group p{font-size:.93rem;color:#c9d6e8}
+.navlinks a:focus-visible,.pills button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
 details.x{border-top:1px solid var(--line);padding:18px 0}
 details.x:last-child{border-bottom:1px solid var(--line)}
 summary{display:grid;grid-template-columns:170px 1fr;gap:20px;cursor:pointer;list-style:none}
@@ -58,20 +108,20 @@ details li{margin-bottom:8px;color:#c9d6e8;font-size:.97rem;max-width:70ch}
 .lg h4{font-size:1rem;margin-bottom:8px;color:var(--ac)}
 .lg li{list-style:none;color:#c9d6e8;font-size:.93rem;margin-bottom:5px}
 footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
-@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:48px}.photo{order:-1;width:130px;height:130px}summary{grid-template-columns:1fr;gap:4px}details ul{margin-left:0}.kpis div{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.kpis div:last-child{border-bottom:0}}
+@media(max-width:720px){nav .w{align-items:flex-start}.navlinks{order:3;width:100%}.pills{order:4;width:100%}.hero{grid-template-columns:1fr;padding-top:48px}.photo{order:-1;width:130px;height:130px}summary{grid-template-columns:1fr;gap:4px}details ul{margin-left:0}.kpis div{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.kpis div:last-child{border-bottom:0}}
 @media(prefers-reduced-motion:no-preference){.hero,.kpis{animation:in .5s ease both}@keyframes in{from{opacity:.4}to{opacity:1}}}
 </style>
 </head>
 <body>
-<nav><div class="w"><a class="logo" href="#product">Guillermo Forteza</a><div class="pills" id="pills" role="group" aria-label="Profile view"></div></div></nav>
-<div class="w">
+<nav><div class="w"><a class="logo" href="#top">Guillermo Forteza</a><div class="navlinks" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#tools">Tools</a></div><div class="pills" id="pills" role="group" aria-label="Explore experience by professional focus"></div></div></nav>
+<div class="w" id="top">
 <header class="hero">
 <div>
 <h1>Guillermo Forteza</h1>
-<h2 id="hl">Project Manager & Product Owner</h2>
-<p id="sm">Product owner and project manager who has delivered 24 conversational-AI projects for 7 public bodies with a team of 9, and who built a B2B SaaS CRM from idea to accelerator programmes. I turn client needs into backlogs, run public tenders and see projects through to delivery.</p>
+<h2 id="hl">Technology Project & Product Manager</h2>
+<p id="sm">I connect business, product and technology to turn business needs into digital solutions and measurable outcomes. 8+ years across technology project management, B2B SaaS, conversational AI, digital transformation and product development.</p>
 <div class="links"><a href="mailto:fortezadesign@gmail.com">Email me</a><a href="https://www.linkedin.com/in/guillermo-forteza/" target="_blank" rel="noopener">LinkedIn</a></div>
-<p class="where">Based in Valencia, Spain. Open to remote, hybrid or on-site roles and to relocating.</p>
+<p class="where">Based in Valencia, Spain. Open to remote, hybrid or on-site roles and international relocation.</p>
 </div>
 <div class="photo" role="img" aria-label="Portrait of Guillermo Forteza"></div>
 </header>
@@ -79,7 +129,67 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 
 <section><h3 class="t">Core skills</h3><div class="tags" id="tg"></div></section>
 
-<section>
+<section id="projects">
+  <div class="section-header">
+    <h3 class="t">Selected projects</h3>
+    <span class="where">Selected work across technology, product and programme management</span>
+  </div>
+  <div class="projects">
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="ciudadano_logo.jfif" alt="Ciudadano Conversacional logo" loading="lazy">
+        <div><div class="project-kicker">Project & Product Delivery</div><h4>Conversational AI for Public Services</h4></div>
+      </div>
+      <p>Led a portfolio of 24 WhatsApp conversational-AI projects for 7 Spanish public bodies, coordinating a cross-functional team of 9: 5 developers and 4 professionals across marketing, support and IT.</p>
+      <ul>
+        <li>Municipal and provincial assistants (excluding Castellón) served 3,000+ active users.</li>
+        <li>MagdaBot, for the Magdalenas de Castellón festival, reached 5,000+ users during a single festival week.</li>
+        <li>In Torre Pacheco, citizen response time fell from 2 days to 15 minutes.</li>
+        <li>10 public tenders across 7 contracting authorities, with an approximate combined value of €1.4M.</li>
+      </ul>
+      <div class="project-tags"><span>MoSCoW</span><span>RICE</span><span>WSJF</span><span>EVM</span><span>Jira</span><span>Google Cloud</span></div>
+    </article>
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="falcon_logo.jfif" alt="Falcon Software logo" loading="lazy">
+        <div><div class="project-kicker">0-to-1 Product Development</div><h4>Falcon SPM — B2B SaaS CRM</h4></div>
+      </div>
+      <p>Built an AI-assisted CRM for field sales teams from concept to deployment, translating business needs into product scope and working software.</p>
+      <ul>
+        <li>Defined the MVP, value proposition, pricing, UX/UI wireframes, functional specifications and user stories.</li>
+        <li>Coordinated development with a MERN-stack developer and validated the product with 35 real users.</li>
+        <li>Selected by Demium and Lanzadera and admitted to the APX accelerator; reached advanced discussions with industrial groups representing salesforces of 4,000 and 150.</li>
+      </ul>
+      <div class="project-tags"><span>Design Thinking</span><span>Lean Startup</span><span>Scrum</span><span>MERN</span><span>B2B SaaS</span></div>
+    </article>
+    <article class="project-card">
+      <div class="project-head">
+        <img class="project-logo" src="innsomnia_logo.jfif" alt="Innsomnia logo" loading="lazy">
+        <div><div class="project-kicker">PMO & Programme Management</div><h4>Santander X 100 — Global Entrepreneurship Programme</h4></div>
+      </div>
+      <p>Coordinated a global entrepreneurship programme and its supporting digital platforms, working with Banco Santander and startup ecosystem stakeholders.</p>
+      <ul>
+        <li>Managed an initial €600K budget in 2023 and negotiated an increase to €1M in May 2024, approved in December 2024 for the 2025 programme.</li>
+        <li>Scaled cumulative participation from 90 to 120 to 150 startups through successive batches, with no dropouts.</li>
+        <li>Created Investors Connect with 25 business angels and 12 funds; 12 startups contacted investors.</li>
+      </ul>
+      <div class="project-tags"><span>PMO</span><span>Budget negotiation</span><span>Scrum</span><span>Digital platforms</span><span>Stakeholder management</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="tools">
+  <h3 class="t">Tools & platforms</h3>
+  <div class="tool-groups">
+    <div class="tool-group"><h4>Project & Delivery</h4><p>Jira (Expert) · Confluence (Expert) · Trello (Expert) · Microsoft Project (Working Knowledge) · Asana (Intermediate) · Redmine (Intermediate) · ClickUp (Intermediate)</p></div>
+    <div class="tool-group"><h4>Collaboration & Design</h4><p>Notion (Advanced) · Slack (Advanced) · Figma (Intermediate) · Miro (Intermediate)</p></div>
+    <div class="tool-group"><h4>Data & Analytics</h4><p>Excel (Advanced) · Power BI (Basic) · SQL (Basic)</p></div>
+    <div class="tool-group"><h4>CRM & Automation</h4><p>HubSpot · Apollo · Calendly · Dux-Soup · n8n (Basic)</p></div>
+    <div class="tool-group"><h4>Technology Platforms</h4><p>Google Cloud · WhatsApp Business Platform · ChatGPT</p></div>
+  </div>
+</section>
+
+<section id="experience">
     <div class="section-header">
         <h3 class="t">Experience</h3>
         <select class="sort-select" id="sort-select">
@@ -91,38 +201,38 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 
 <details class="x" data-id="ecu" data-date="2026-01"><summary><span class="dt">Jan 2026 – Present</span><span class="ti"><b>Founder & CEO</b><span>ECU Solutions</span></span></summary><ul>
 <li>Launched a B2B line for vehicle electronics (ECU programming, repair and diagnostics) with its own brand, accounts and clients, alongside an existing workshop.</li>
-<li>Went from €0 to €90k in B2B revenue in 8 months: 300 workshops prospected, 17 recurring clients and 120 services. The shared business doubled from €90k to €180k.</li>
-<li>A remote model (cloud map reprogramming, technician on site) raised services per day by 20%. Invested €60k in tools and licences.</li></ul></details>
+<li>Generated €90K in B2B revenue from January to November 2026: 300 workshops prospected, 17 recurring clients and 120 services delivered.</li>
+<li>Coordinated a team of 3 across field sales, programming and mechanical services; invested €60K in tools and licences.</li><li>Introduced a remote delivery model combining cloud-based ECU mapping with on-site technicians, increasing daily service capacity by 20%.</li></ul></details>
 
-<details class="x" data-id="directivos" data-date="2025-09"><summary><span class="dt">Sep 2025 – Jan 2026</span><span class="ti"><b>Partner & Consultant</b><span>Directivos IA</span></span></summary><ul>
+<details class="x" data-id="directivos" data-date="2025-09"><summary><span class="dt">Sep 2025 – Jan 2026</span><span class="ti"><b>Partner & AI Transformation Consultant</b><span>Directivos IA</span></span></summary><ul>
 <li>Delivered 20 one-to-one AI sessions for HR, sales and finance leaders at Valencian companies.</li>
-<li>Automated lead capture with n8n and Apollo, lifting lead conversion by 7%.</li></ul></details>
+<li>Automated lead capture with n8n and Apollo, increasing lead conversion by 7 percentage points.</li></ul></details>
 
 <details class="x" data-id="ciudadano" data-date="2025-03" open><summary><span class="dt">Mar 2025 – Aug 2025</span><span class="ti"><b>Project Manager & Product Owner</b><span>Ciudadano Conversacional</span></span></summary><ul>
-<li>Led 24 WhatsApp conversational-AI projects for 7 Spanish public bodies with a team of 9 across marketing, support and IT: 3,000+ active users, and 5,000+ in one festival week.</li>
-<li>Won 10 public tenders (around €200k per contracting body), justified every project and delivered each one funded on time.</li>
-<li>Prioritised the backlog with MoSCoW in Jira and Confluence, and set fixed answer templates to curb hallucinations. In Torre Pacheco, citizen response time fell from 2 days to 15 minutes.</li>
-<li>Stack: WhatsApp Business Platform, Google Cloud, ChatGPT.</li></ul></details>
+<li>Led 24 WhatsApp conversational-AI projects for 7 Spanish public bodies, coordinating a cross-functional team of 9 (5 developers and 4 professionals across marketing, support and IT). Municipal and provincial assistants (excluding Castellón) served 3,000+ active users. MagdaBot, the assistant for the Magdalenas de Castellón festival, reached 5,000+ users during a single festival week.</li>
+<li>Won 10 public tenders across 7 contracting authorities, with one or two tenders per authority and a combined value of approximately €200K per authority (approximately €1.4M overall). Managed project justification and ensured on-time delivery.</li>
+<li>Used MoSCoW, RICE and WSJF for backlog and feature prioritisation, and Earned Value Management (EVM) for project control in Jira and Confluence. Introduced fixed answer templates to mitigate AI hallucinations. In Torre Pacheco, citizen response time fell from 2 days to 15 minutes.</li>
+<li>Technology stack: WhatsApp Business Platform, Google Cloud and ChatGPT.</li></ul></details>
 
 <details class="x" data-id="innsomnia" data-date="2023-03" open><summary><span class="dt">Mar 2023 – Feb 2025</span><span class="ti"><b>Innovation Consultant & PMO</b><span>Innsomnia (Santander X 100, SAVIA, GSK)</span></span></summary><ul>
-<li>Santander X 100: coordinated the programme and its budget (€600k in 2023, €1M in 2024–25, grown through direct negotiation). Startups rose from 90 to 120 to 150 and none dropped out.</li>
+<li>Santander X 100: coordinated the global programme. Managed an initial budget of €600K in 2023 and negotiated an increase to €1M in May 2024, approved in December 2024 for the 2025 programme. Cumulative participation grew from 90 to 120 to 150 startups through successive batches, with no dropouts.</li>
 <li>Planned, designed and budgeted the mentoring, acceleration and community platforms, and created Investors Connect (25 business angels and 12 funds; 12 startups contacted investors).</li>
-<li>SAVIA Innova: ran the open-innovation call for a care-home group, screening 120 startups per call, with 3 winners each time and 3 pilots.</li>
-<li>GSK: designed an open-innovation plan across four therapeutic areas and confirmed 15 partners, research centres and specialists.</li>
+<li>SAVIA Innova: managed two open-innovation calls for a care-home group, screening 120 startups per call and initiating 3 pilots across the programme.</li>
+<li>GSK: designed an open-innovation plan across four therapeutic areas and confirmed 15 partners, research centres and specialists.</li><li>Applied Scrum practices to programme delivery.</li>
 <li>EOI accelerator: automated intake with Dux-Soup, Calendly and HubSpot, taking sign-ups from 37 in a year to 156 in two months.</li></ul></details>
 
 <details class="x" data-id="ceei" data-date="2020-10" open><summary><span class="dt">Oct 2020 – Feb 2023</span><span class="ti"><b>Innovation & Business Consultant</b><span>CEEI Valencia</span></span></summary><ul>
 <li>CV Innova: coordinated an open-innovation programme, recruiting corporate challengers and startup solvers.</li>
 <li>Mentored 12 companies per block, three blocks a year, in each of two programmes, writing their business plans. Screened 150 applications down to 20 finalists and 3 winners.</li>
-<li>Prepared public-funding bids: a CDTi application scored 85/100, above the cut-off but unfunded for budget reasons, and two IVACE innovation grants worth €75k were awarded.</li>
+<li>Prepared public-funding bids: a CDTI application scored 85/100, above the cut-off but unfunded for budget reasons; secured a €75K IVACE grant for an IT digitalisation innovation project.</li><li>Implemented and applied Scrum, Lean and Agile practices in programme delivery.</li>
 <li>Designed a document-management platform for public programmes (mentors, hours, justification reports, KPIs) and introduced digital contract signing.</li></ul></details>
 
-<details class="x" data-id="falcon" data-date="2018-09" open><summary><span class="dt">Sep 2018 – Aug 2020</span><span class="ti"><b>Founder & CEO</b><span>Falcon Software S.L.</span></span></summary><ul>
+<details class="x" data-id="falcon" data-date="2018-09" open><summary><span class="dt">Sep 2018 – Aug 2020</span><span class="ti"><b>Founder, CEO & Product Owner</b><span>Falcon Software S.L.</span></span></summary><ul>
 <li>Built an AI-assisted CRM (B2B SaaS) for field sales reps: route, visit and order tracking, GPS-based data capture, purchase-potential scoring and product recommendations.</li>
-<li>Defined the value proposition, pricing and business plan, and validated the product with 35 real users with one developer (MERN stack).</li>
+<li>Defined the value proposition, pricing and business plan, and validated the product with 35 real users, coordinating development with one MERN-stack developer. Applied Design Thinking, Lean Startup and Scrum throughout product development.</li>
 <li>Selected by Demium and Lanzadera and admitted to APX; in advanced talks with two industrial groups (4,000 and 150 sales reps).</li></ul></details>
 
-<details class="x" data-id="bcoach" data-date="2022-03"><summary><span class="dt">Mar 2022 – Dec 2023</span><span class="ti"><b>Business Advisor, 5% equity</b><span>BCoach</span></span></summary><ul>
+<details class="x" data-id="bcoach" data-date="2022-03"><summary><span class="dt">Mar 2022 – Dec 2023</span><span class="ti"><b>Board Member & Business Advisor (5% equity)</b><span>BCoach · Parallel advisory role</span></span></summary><ul>
 <li>Defined the go-to-market for a football coaching app (set-piece planning, tactical board, player tracking): club-wide deals instead of selling to individual coaches.</li>
 <li>Worked on an agreement with a first-division club to roll the app out across all age categories.</li></ul></details>
 
@@ -130,7 +240,7 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 <li>Launched new furniture-hardware lines for DIY retailers (Leroy Merlin, Bauhaus, Brico Depot): door stops, bike racks, textile stops, furniture legs and antibacterial copper handles.</li>
 <li>Managed catalogue, pricing, offers, tenders and margins. Big-box sales of the metal handles line grew 13%.</li>
 <li>Adapted Redmine to real workflows across marketing, sales, purchasing, operations and quality: deliveries later than the agreed date fell 20%.</li>
-<li>A door stop developed during my tenure won a Red Dot Design award.</li></ul></details>
+<li>Contributed to the development of a doorstop design that received a Red Dot Design Award during my tenure.</li></ul></details>
 
 <details class="x" data-id="reca" data-date="2016-06"><summary><span class="dt">Jun 2016 – Sep 2017</span><span class="ti"><b>Product Manager</b><span>Reca Hispania (Würth Group)</span></span></summary><ul>
 <li>Turned product and pricing decisions from three product managers into catalogue, web and offers, and localised German content and technical documents into Spanish.</li>
@@ -144,40 +254,41 @@ footer{padding:56px 0 40px;color:var(--mu);font-size:.9rem}
 
 </div></section>
 
-<section><h3 class="t">Education and certifications</h3><div class="edu">
-<div><b><a href="https://simpli-web.app.link/e/9OCc3WNnV7b" target="_blank" rel="noopener" style="text-decoration: underline;">PMP Basics</a></b><span>SkillUp (Simplilearn), Nov 2026</span></div>
+<section id="education"><h3 class="t">Education & professional development</h3><div class="edu">
+<div><b><a href="https://simpli-web.app.link/e/9OCc3WNnV7b" target="_blank" rel="noopener" style="text-decoration: underline;">PMP Basics course</a></b><span>SkillUp (Simplilearn), Nov 2026</span></div>
 <div><b>MBA, Digital Business Administration</b><span>Demium Startups Academy, Sep 2018 – Mar 2019</span></div>
 <div><b>Calidad Total, Mercadona</b><span>EDEM Escuela de Empresarios, Sep 2019 – Feb 2020</span></div>
 <div><b>Design Engineering and Product Development</b><span>Universidad Cardenal Herrera CEU, 4-year degree</span></div>
 <div><b>Technical Engineering in Industrial Design</b><span>Universidad Cardenal Herrera CEU, 3-year degree</span></div>
 <div><b>Specialist in Graphic Design and Multimedia</b><span>Universidad Politécnica de Valencia</span></div>
-<div><b>Certifications and awards</b><span>Digital Marketing Fundamentals (Google), GTD with Scrum and Agile (startups.st), 3rd place Shell Eco-marathon Europe 2013 (hydrogen prototype)</span></div>
+<div><b>Professional development</b><span>PMP Basics (SkillUp / Simplilearn), Digital Marketing Fundamentals (Google), GTD with Scrum and Agile (startups.st)</span></div><div><b>Awards</b><span>3rd place, Shell Eco-marathon Europe 2013 (hydrogen prototype)</span></div>
 </div></section>
 
-<section><h3 class="t">Practical details</h3><div class="lg">
-<div><h4>Location and mobility</h4><ul><li>Valencia, Spain (CET)</li><li>Open to relocating, especially San Luis Potosí or Aguascalientes in Mexico</li><li>Remote, hybrid or on-site; travel up to 25%</li></ul></div>
-<div><h4>Work authorisation</h4><ul><li>Spanish national and EU citizen</li><li>Open to sponsored visas for relocation</li><li>Open to background and reference checks</li></ul></div>
-<div><h4>Availability</h4><ul><li>Immediate, or a 15-day transition</li><li>Full-time permanent contracts</li></ul></div>
-<div><h4>Languages</h4><ul><li>Spanish, native</li><li>English, professional working proficiency (B2)</li></ul></div>
+<section id="contact"><h3 class="t">Practical details</h3><div class="lg">
+<div><h4>Location and mobility</h4><ul><li>Valencia, Spain (CET)</li><li>Open to international relocation, prioritising locations offering a favourable salary-to-cost-of-living balance.</li><li>Remote, hybrid or on-site; travel up to 25%</li></ul></div>
+<div><h4>Work authorisation</h4><ul><li>Spanish national and EU citizen</li><li>Open to sponsored visas for relocation</li></ul></div>
+<div><h4>Availability</h4><ul><li>Available to start following an agreed transition period</li></ul></div>
+<div><h4>Languages</h4><ul><li>Spanish, native</li><li>Catalan / Valencian, native / bilingual</li><li>English, professional working proficiency (B2)</li></ul></div>
 </div></section>
 <footer>Guillermo Forteza, Valencia, Spain.</footer>
 </div>
 <script>
 var V={
-product:{n:"Product & Tech",h:"Project Manager & Product Owner",s:"Product owner and project manager who has delivered 24 conversational-AI projects for 7 public bodies with a team of 9, and who built a B2B SaaS CRM from idea to accelerator programmes. I turn client needs into backlogs, run public tenders and see projects through to delivery.",k:[["24","AI projects for 7 public bodies"],["10","public tenders won"],["15 min","citizen response time, down from 2 days"],["3,000+","active users of the assistants"]],t:["Scrum and Kanban","Jira and Confluence","MoSCoW and RICE","B2B SaaS","Conversational AI","WhatsApp Business Platform","Public tenders","Figma and Miro","Power BI"],o:["ciudadano","falcon","innsomnia","ceei","ecu","directivos","rei","reca","bcoach","moler"]},
-innovation:{n:"Innovation & Startups",h:"Innovation Manager, Open Innovation & Startup Programmes",s:"I run open-innovation and startup programmes: Santander X 100 (budget grown from €600k to €1M), SAVIA Innova, a GSK open-innovation design and several programmes at CEEI Valencia. My work spans startup scouting, mentoring, investor access and public funding.",k:[["€1M","Santander X 100 budget, grown from €600k"],["150","startups in the programme, none dropped out"],["37","investors in Investors Connect"],["156","sign-ups in two months, up from 37 in a year"]],t:["Open innovation","Startup acceleration","Corporate venturing","Mentoring programmes","Public grants (CDTi, IVACE)","Investor relations","Programme budgets","HubSpot and Dux-Soup","n8n automation","Stakeholder management"],o:["innsomnia","ceei","falcon","bcoach","ciudadano","ecu","directivos","moler","rei","reca"]},
-business:{n:"Founder & Business",h:"Founder & Business Advisor, Go-to-Market and B2B Growth",s:"I launched ECU Solutions from zero to €90k of B2B revenue in eight months, took Falcon through Demium, Lanzadera and APX, and advised BCoach on go-to-market. I work hands-on across sales, operations, pricing and product.",k:[["€0 to €90k","B2B revenue in 8 months"],["17","recurring workshop clients"],["3","ventures founded or co-founded"],["+20%","services per day with a remote model"]],t:["Go-to-market","Pricing and packaging","P&L and budgets","Financial modelling","B2B sales","Operations","Business plans","Investor documentation","SQL and advanced Excel"],o:["ecu","falcon","bcoach","directivos","moler","innsomnia","ceei","ciudadano","rei","reca"]},
+product:{n:"Project & Product",h:"Technology Project & Product Manager",s:"I connect business, product and technology to turn business needs into digital solutions and measurable outcomes. With 8+ years across technology project management, B2B SaaS, conversational AI, digital transformation and product development, I combine project governance, Agile delivery, product ownership and business development.",k:[["24","conversational-AI projects"],["7","public-sector organisations"],["3,000+","users of municipal and provincial assistants, excluding Castellón"],["5,000+","MagdaBot users during one festival week"]],t:["Project governance","Product ownership","Scrum, Lean and Design Thinking","Jira and Confluence","MoSCoW, RICE and WSJF","Earned Value Management (EVM)","B2B SaaS","Conversational AI","Stakeholder management","Public procurement"],o:["ciudadano","falcon","innsomnia","ceei","ecu","directivos","rei","reca","bcoach","moler"]},
+innovation:{n:"Innovation & PMO",h:"Innovation Consultant & PMO | Programme Management",s:"I coordinated innovation and entrepreneurship programmes for Banco Santander, SAVIA and GSK. At Santander X 100, I negotiated an increase from €600K to €1M in May 2024, approved for the 2025 programme, while cumulative participation grew from 90 to 120 to 150 startups through successive batches.",k:[["€1M","approved budget for the 2025 programme, negotiated in 2024"],["150","cumulative startups: 90 → 120 → 150 across successive batches"],["37","business angels and investment funds in Investors Connect"],["156","programme registrations in two months, up from 37 in a year"]],t:["Open innovation","Startup acceleration","Corporate venturing","Mentoring programmes","Public grants (CDTi, IVACE)","Investor relations","Programme budgets","HubSpot and Dux-Soup","n8n automation","Stakeholder management"],o:["innsomnia","ceei","falcon","bcoach","ciudadano","ecu","directivos","moler","rei","reca"]},
+business:{n:"Entrepreneurship & Business",h:"Founder & Business Advisor | B2B Growth & Operations",s:"I generated €90K in B2B revenue at ECU Solutions between January and November 2026, built Falcon Software from concept to user validation, and advised BCoach on go-to-market. My experience spans business development, pricing, operations and product.",k:[["€90k","B2B revenue, Jan–Nov 2026"],["17","recurring workshop clients"],["3","ventures founded or co-founded"],["+20%","services per day with a remote model"]],t:["Go-to-market","Pricing and packaging","P&L and budgets","Financial modelling","B2B sales","Operations","Business plans","Investor documentation","SQL and advanced Excel"],o:["ecu","falcon","bcoach","directivos","moler","innsomnia","ceei","ciudadano","rei","reca"]},
 industrial:{n:"Industrial Product",h:"Industrial Product & Project Manager",s:"I have managed industrial and retail products from design to shelf: new lines for DIY retailers (Leroy Merlin, Bauhaus, Brico Depot) at Reunión Industrial, and catalogue, web and sales support for a 150-rep network at Reca Hispania. Industrial design engineer by training.",k:[["Red Dot","design award, door stop from my tenure"],["+13%","big-box sales in metal handles"],["−20%","late deliveries against agreed dates"],["150","sales reps supported"]],t:["Product lifecycle","Pricing and margins","Tenders and offers","Catalogue management","Operations and stock","Redmine","Industrial design","Prototyping","DIY and retail accounts"],o:["rei","reca","moler","ecu","ciudadano","falcon","innsomnia","ceei","directivos","bcoach"]}
 };
 
 var P=document.getElementById("pills");
 var sortSelect = document.getElementById("sort-select");
+var activeProfile = "product";
 
 Object.keys(V).forEach(function(k){var b=document.createElement("button");b.textContent=V[k].n;b.dataset.k=k;b.onclick=function(){location.hash=k};P.appendChild(b)});
 
 function show(){
- var k=location.hash.slice(1);if(!V[k])k="product";var v=V[k];
- Array.prototype.forEach.call(P.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===k)});
+ var k=location.hash.slice(1);if(V[k])activeProfile=k;var v=V[activeProfile];
+ Array.prototype.forEach.call(P.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===activeProfile)});
  document.getElementById("hl").textContent=v.h;document.getElementById("sm").textContent=v.s;
  document.title="Guillermo Forteza | "+v.h;
  document.getElementById("kp").innerHTML=v.k.map(function(x){return "<div><b>"+x[0]+"</b><span>"+x[1]+"</span></div>"}).join("");
@@ -216,9 +327,7 @@ function sortExperiences(profileData) {
 
 // Listen for dropdown changes
 sortSelect.addEventListener("change", function() {
-    var k = location.hash.slice(1);
-    if (!V[k]) k = "product";
-    sortExperiences(V[k]);
+    sortExperiences(V[activeProfile]);
 });
 
 window.addEventListener("hashchange",show);show();
