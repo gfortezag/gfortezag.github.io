@@ -12,6 +12,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0e1726;--bg2:#13203a;--line:#27395a;--tx:#eaf0f8;--mu:#9db0c9;--ac:#38bdf8;color-scheme:dark}*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}.w{max-width:1040px;margin:auto;padding:0 22px}a{color:inherit}nav{position:sticky;top:0;background:rgba(14,23,38,.94);border-bottom:1px solid var(--line);z-index:2}nav .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.navlinks{display:flex;gap:16px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--mu)}.hero{padding:70px 0 45px;display:grid;grid-template-columns:1fr 180px;gap:36px;align-items:center}.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);line-height:1.05}.hero h2{color:var(--ac);margin:12px 0}.hero p{color:var(--mu);max-width:68ch}.photo{width:180px;height:180px;border-radius:50%;background:url('../foto-perfil.png') center/cover;border:3px solid var(--ac)}.links{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}.links a{padding:9px 15px;border:1px solid var(--ac);border-radius:6px;text-decoration:none}.links a:first-child{background:var(--ac);color:#04121f}.kpis,.cards,.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.kpis{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}.kpis b{display:block;font-size:2rem}.kpis span,.muted{color:var(--mu);font-size:.92rem}section{padding:48px 0 8px}h3{font-size:1.7rem;margin-bottom:20px}.card{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:0}.project-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}.project-logo{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:9px;padding:5px;flex:0 0 auto}.project-kicker{color:var(--ac);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.card h4{margin:2px 0 10px;color:var(--tx);font-size:1.15rem;line-height:1.25}.card p,.card li{color:#c9d6e8;font-size:.95rem}.card ul{padding-left:18px;margin-top:10px}.card li{margin-bottom:7px}.project-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.project-tags span{font-size:.78rem;background:#0e1726;border:1px solid var(--line);border-radius:99px;padding:4px 9px;color:var(--mu)}.project-kicker{display:block}.section-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px;margin-bottom:22px}.sort-select{background:var(--bg2);color:var(--tx);border:1px solid var(--line);padding:6px 12px;border-radius:6px;font:600 .9rem "Bricolage Grotesque",sans-serif;cursor:pointer}.sort-select:focus{border-color:var(--ac)}.pills{display:flex;gap:6px;flex-wrap:wrap}.pills button{font:600 .85rem "Bricolage Grotesque",sans-serif;background:none;color:var(--mu);border:1px solid var(--line);padding:6px 14px;border-radius:99px;cursor:pointer}.pills button[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#04121f}.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px 34px}.edu-group h4{font-size:1rem;color:var(--ac);margin-bottom:12px}.edu-item{padding:0 0 13px;margin-bottom:13px;border-bottom:1px solid var(--line)}.edu-item:last-child{border-bottom:0;margin-bottom:0}.edu-item b{display:block;color:var(--tx);font-size:1rem;font-weight:700}.edu-item span{display:block;color:var(--ac);font-size:.92rem;font-weight:600}.edu-item p{color:var(--mu);font-size:.9rem;margin-top:3px}details.x{border-top:1px solid var(--line);padding:16px 0}details.x:last-child{border-bottom:1px solid var(--line)}details.x{border-top:1px solid var(--line);padding:18px 0}details.x:last-child{border-bottom:1px solid var(--line)}summary{display:grid;grid-template-columns:170px 1fr;gap:20px;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}.dt{color:var(--mu);font-size:.92rem;padding-top:3px}.ti b{display:block;font-size:1.12rem;color:var(--ac);font-weight:600}.ti span{font-weight:600}.ti:after{content:"+";float:right;color:var(--mu);font-size:1.3rem;line-height:1}details[open] .ti:after{content:"–"}details ul{margin:12px 0 0 190px;padding-left:18px}details li{margin-bottom:8px;color:#c9d6e8;font-size:.97rem;max-width:70ch}.cols h4{color:var(--ac);margin-bottom:8px}.cols p,.cols li{color:#c9d6e8;font-size:.94rem}.cols ul{list-style:none}footer{padding:50px 0;color:var(--mu);font-size:.9rem}@media(max-width:720px){nav .w{align-items:flex-start}.navlinks{order:3;width:100%}.pills{order:4;width:100%}.hero{grid-template-columns:1fr;padding-top:42px}.photo{order:-1;width:125px;height:125px}summary{grid-template-columns:1fr;gap:4px}details ul{margin-left:0}}
+
+/* Consistent visual system for the closing sections */
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.edu-panel,.info-card{background:linear-gradient(145deg,rgba(19,32,58,.96),rgba(17,29,49,.96));border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0;position:relative;overflow:hidden}
+.edu-panel:before,.info-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--ac);opacity:.78}
+.edu-panel h4,.info-card h4{font-size:1rem;color:var(--ac);font-weight:700;letter-spacing:.02em;margin:0 0 16px}
+.edu-entry{padding:0 0 13px;margin:0 0 13px;border-bottom:1px solid rgba(157,176,201,.16)}
+.edu-entry:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
+.edu-entry b{display:block;font-size:.98rem;line-height:1.35;color:var(--tx)}
+.edu-entry span{display:block;color:var(--mu);font-size:.9rem;margin-top:3px}
+.edu-entry p{color:#c9d6e8;font-size:.9rem;margin-top:6px}
+.edu-entry a{color:var(--ac);font-weight:700;text-decoration:none}
+.edu-entry a:hover{text-decoration:underline}
+.credential-feature{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:16px;align-items:center;padding:16px;background:rgba(56,189,248,.07);border:1px solid rgba(56,189,248,.34);border-radius:11px;margin-bottom:16px}
+.credential-copy .credential-status{display:inline-flex;align-items:center;gap:6px;color:#a7f3d0;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+.credential-copy .credential-status:before{content:"";width:7px;height:7px;border-radius:50%;background:#34d399}
+.credential-copy b{display:block;font-size:1.05rem;line-height:1.3}
+.credential-copy p{color:var(--mu);font-size:.9rem;margin:7px 0 12px}
+.credential-copy a{display:inline-block;color:#04121f;background:var(--ac);border-radius:6px;padding:7px 11px;font-size:.84rem;font-weight:700;text-decoration:none}
+.credential-badge{width:150px;height:270px;overflow:hidden;border-radius:8px;justify-self:end;background:#fff}
+.credential-badge div[data-share-badge-id]{width:150px;height:270px}
+.credential-badge iframe{display:block;max-width:150px;border:0}
+.edu-sublist{display:grid;grid-template-columns:1fr;gap:0}
+.edu-tools{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.edu-tools .edu-entry{margin:0;padding:0;border:0}
+#contact .lg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#contact .lg>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;position:relative}
+#contact .lg>div:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--ac);border-radius:12px 0 0 12px}
+#contact .lg h4{color:var(--ac);font-size:.96rem;margin:0 0 8px}
+#contact .lg li{color:#c9d6e8;font-size:.92rem;line-height:1.5;margin:0 0 5px}
+@media(max-width:720px){.edu,#contact .lg{grid-template-columns:1fr}.credential-feature{grid-template-columns:minmax(0,1fr) 120px;gap:12px}.credential-badge{transform:scale(.8);transform-origin:right center;margin-left:-25px}.edu-tools{grid-template-columns:1fr}}
+@media(max-width:420px){.credential-feature{grid-template-columns:1fr}.credential-badge{justify-self:start;transform:none;margin:4px 0 0}}
+
 </style>
 </head>
 <body>
@@ -37,26 +70,33 @@
 <details class="x" data-id="reca" data-date="2016-06"><summary><span class="dt">Jun. 2016 – Sep. 2017</span><span class="ti"><b>Product Manager</b><span>RECA Hispania (Würth Group)</span></span></summary><ul><li>Convertí las decisiones de producto y precios de tres product managers en catálogo, web y ofertas, y adapté al español contenidos y documentación técnica procedentes del alemán.</li><li>Añadí un formulario de solicitud de visita a la web: las peticiones aumentaron de unas 4 al año a 35.</li><li>Di soporte a los 150 representantes comerciales mediante asesoramiento técnico, visitas de campo, formación de producto y aprobación de condiciones especiales para proteger márgenes.</li></ul></details>
 <details class="x" data-id="moler" data-date="2013-10"><summary><span class="dt">Oct. 2013 – Jun. 2015</span><span class="ti"><b>Co-founder & Chief Design Officer</b><span>Möler · Gafas de madera</span></span></summary><ul><li>Amplié la gama de 2 a 7 modelos e incorporé tres maderas y cinco opciones de color.</li><li>Pasé del corte manual al corte láser de varillas y monturas, manteniendo el acabado artesanal: prototipado más rápido y un catálogo más amplio sin coste adicional.</li><li>Asumí diseño, producción y ventas dentro de un equipo de tres personas.</li></ul></details>
 </div></section>
-<section id="formacion"><h3>Formación y desarrollo profesional</h3><div class="edu">
-<div class="edu-group"><h4>Formación académica</h4>
-<div class="edu-item"><b>Ingeniería en Diseño Industrial y Desarrollo de Producto</b><span>Universidad CEU Cardenal Herrera</span><p>Titulación universitaria.</p></div>
-<div class="edu-item"><b>MBA en Digital Business Administration</b><span>Demium Startups Academy</span><p>Formación en negocio digital y emprendimiento.</p></div>
-<div class="edu-item"><b>Calidad Total, Mercadona</b><span>EDEM Escuela de Empresarios</span><p>Formación ejecutiva.</p></div>
-<div class="edu-item"><b>Especialista en Diseño Gráfico y Multimedia</b><span>Universitat Politècnica de València</span></div>
+<section id="formacion"><h3>Formación y desarrollo profesional</h3>
+<div class="edu">
+<div class="edu-panel"><h4>Formación académica</h4>
+<div class="edu-entry"><b>Ingeniería en Diseño Industrial y Desarrollo de Producto</b><span>Universidad CEU Cardenal Herrera</span></div>
+<div class="edu-entry"><b>MBA en Digital Business Administration</b><span>Demium Startups Academy</span></div>
+<div class="edu-entry"><b>Calidad Total, Mercadona</b><span>EDEM Escuela de Empresarios</span></div>
+<div class="edu-entry"><b>Especialista en Diseño Gráfico y Multimedia</b><span>Universitat Politècnica de València</span></div>
 </div>
-<div class="edu-group"><h4>Formación complementaria</h4>
-<div class="edu-item"><b>Google Project Management Professional Certificate</b><span>Google · Coursera · Certificado completado</span><p><a href="https://coursera.org/share/25d6f877432a3f937cc2704637ffc928" target="_blank" rel="noopener">Ver certificado</a></p><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b1a0bc5b-1d2e-4dfd-86d6-87e9715a6ea4" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script></div>
-<div class="edu-item"><b>Introduction to ITIL® V4</b><span>Simplilearn · Noviembre de 2026</span><p>Curso introductorio de ITIL® V4.</p></div>
-<div class="edu-item"><b>Digital Marketing Fundamentals</b><span>Google</span></div>
-<div class="edu-item"><b>GTD con Scrum y Agile</b><span>startups.st</span></div>
+<div class="edu-panel"><h4>Formación complementaria</h4>
+<div class="credential-feature"><div class="credential-copy"><span class="credential-status">Certificado completado</span><b>Google Project Management Professional Certificate</b><p>Google · Coursera</p><a href="https://coursera.org/share/25d6f877432a3f937cc2704637ffc928" target="_blank" rel="noopener">Ver certificado</a></div>
+<div class="credential-badge"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b1a0bc5b-1d2e-4dfd-86d6-87e9715a6ea4" data-share-badge-host="https://www.credly.com"></div></div>
 </div>
-<div class="edu-group"><h4>Metodologías y herramientas</h4>
-<div class="edu-item"><b>Gestión y entrega</b><span>Jira · Confluence · Trello · Microsoft Project</span><p>También Asana, Redmine, ClickUp, Notion y Slack.</p></div>
-<div class="edu-item"><b>Datos, diseño y automatización</b><span>Excel · Power BI · SQL · Figma · Miro · n8n · Apollo</span></div>
-<div class="edu-item"><b>Metodologías</b><span>Scrum · Lean Startup · Design Thinking · MoSCoW · RICE · WSJF · EVM</span></div>
+<div class="edu-sublist">
+<div class="edu-entry"><b>Introduction to ITIL® V4</b><span>Simplilearn · Noviembre de 2026</span></div>
+<div class="edu-entry"><b>Digital Marketing Fundamentals</b><span>Google</span></div>
+<div class="edu-entry"><b>GTD con Scrum y Agile</b><span>startups.st</span></div>
 </div>
+</div>
+<div class="edu-panel"><h4>Metodologías y herramientas</h4><div class="edu-tools">
+<div class="edu-entry"><b>Gestión y entrega</b><span>Jira · Confluence · Trello · Microsoft Project</span></div>
+<div class="edu-entry"><b>Colaboración</b><span>Asana · Redmine · ClickUp · Notion · Slack</span></div>
+<div class="edu-entry"><b>Datos y diseño</b><span>Excel · Power BI · SQL · Figma · Miro</span></div>
+<div class="edu-entry"><b>Automatización</b><span>n8n · Apollo</span></div>
+<div class="edu-entry"><b>Metodologías</b><span>Scrum · Lean Startup · Design Thinking · MoSCoW · RICE · WSJF · EVM</span></div>
+</div></div>
 </div></section>
-<section><h3>Información práctica</h3><div class="cols"><div><h4>Ubicación y movilidad</h4><ul><li>Valencia, España</li><li>Abierto a movilidad internacional (UE y resto del mundo)</li><li>Modalidad remota, híbrida o presencial</li></ul></div><div><h4>Autorización de trabajo</h4><ul><li>Nacionalidad española y ciudadanía de la UE</li></ul></div><div><h4>Disponibilidad</h4><ul><li>Incorporación tras un periodo de transición acordado</li></ul></div><div><h4>Idiomas</h4><ul><li>Español: nativo</li><li>Catalán / valenciano: nativo / bilingüe</li><li>Inglés: competencia profesional</li></ul></div></div></section>
+<section><h3>Información práctica</h3><div class="cols"><div class="info-card"><h4>Ubicación y movilidad</h4><ul><li>Valencia, España</li><li>Abierto a movilidad internacional (UE y resto del mundo)</li><li>Modalidad remota, híbrida o presencial</li></ul></div><div class="info-card"><h4>Autorización de trabajo</h4><ul><li>Nacionalidad española y ciudadanía de la UE</li></ul></div><div class="info-card"><h4>Disponibilidad</h4><ul><li>Incorporación tras un periodo de transición acordado</li></ul></div><div class="info-card"><h4>Idiomas</h4><ul><li>Español: nativo</li><li>Catalán / valenciano: nativo / bilingüe</li><li>Inglés: competencia profesional</li></ul></div></div></section>
 <footer>Guillermo Forteza · Valencia, España · <a href="/">English version</a></footer>
 </main><script>
 var V={
